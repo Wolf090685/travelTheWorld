@@ -152,8 +152,7 @@ body {
 }
 
 .country-item {
-    display: flex;
-    margin-right: 15px;
+    display: flex;    
     padding: 3px 15px 4px 12px;
     border: 2px solid #fff;
     cursor: pointer;    
@@ -161,6 +160,7 @@ body {
 }
 
 .country-item--selected { 
+    margin-right: 15px;
     padding: 9px 16px;
     border: 1px solid #000;       
 }
@@ -170,7 +170,7 @@ body {
 }
 
 .country-item__icon {
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .country-item--selected span {
