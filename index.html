@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel the world</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo" href="#">
+                    <img class="header__logo-img" src="images/icons/logo.svg" alt="travel the world">
+                </a>
+
+                <ul class="user-list">
+                    <li class="user-list__item">
+                        <a class="user-list__link user-list__link--lang-select" href="#">ru</a>
+                    </li>
+                    <li class="user-list__item">
+                        <a class="user-list__link" href="#">
+                            <img src="images/icons/heart-black.svg" alt="favourites icon">
+                        </a>
+                    </li>
+                    <li class="user-list__item">
+                        <a class="user-list__link" href="#">
+                            <img src="images/icons/icon-user.svg" alt="user icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /.header -->
+
+    <!-- Main slider -->
+    <div class="main-slider">
+        <div class="container">
+            <div class="main-slider__box">
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-1.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Пирамиды Гизы</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-2.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Великая китайская стена</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-3.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Тадж-Махал</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-4.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Эйфелева башня</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-5.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Колизей</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-1.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Пирамиды Гизы</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-2.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Великая китайская стена</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-3.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Тадж-Махал</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-4.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Эйфелева башня</h3>
+                    </a>
+                </div>
+
+                <div class="main-slider__item">
+                    <a class="main-slider__item-box" href="#">
+                        <div class="main-slider__item-img">
+                            <img class="main-slider__img" src="images/main-slider/main-slider-5.jpg" alt="slide img">
+                        </div>
+                        <h3 class="main-slider__title">Колизей</h3>
+                    </a>
+                </div>
+
+            </div>
+            <!-- /.main-slider__box -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.main-slider -->
+
+    <!-- Сhoice country and subject-->
+    <section class="choice-country">
+        <h1 class="choice-country__title">Выберите страну или тематику путешествия:</h1>
+        <form class="choice-country-form" action="/" method="POST">
+            <div class="container">
+                <div class="selected-countries">
+                    <div class="country-item country-item--selected">
+                        <img class="country-item__icon" src="images/flags/Italy.svg" alt="Italy">
+                        <span>Италия</span>
+                    </div>
+                    <div class="country-item country-item--selected">
+                        <img class="country-item__icon" src="images/flags/Spain.svg" alt="Spain">
+                        <span>Испания</span>
+                    </div>
+                    <div class="country-item country-item--selected">
+                        <img class="country-item__icon" src="images/flags/France.svg" alt="France">
+                        <span>Франция</span>
+                    </div>
+                </div>
+
+                <div class="period-select">
+                    <label class="period-select__label">с
+                        <input class="period-select__input" type="date">
+                    </label>
+                    <label class="period-select__label">по
+                        <input class="period-select__input" type="date">
+                    </label>
+                    <button class="period-select__btn" type="submit">Поиск</button>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="choice-country__nav-tabs tabs">
+                <ul class="choice-country__tabs-list">
+                    <li class="choice-country__nav-tab choice-country__nav-tab-item tab-item tab-item--active" data-id="#tab1">
+                        <a class="choice-country__nav-tab-link" href="#">
+                            Куда отправитесь?
+                        </a>
+                    </li>
+                    <li class="choice-country__nav-tab-item tab-item" data-id="#tab2">
+                        <a class="choice-country__nav-tab-link" href="#">
+                            Чем займетесь?
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- choice-country.tabs -->
+
+            <div class="choice-country__tabs-content-wrapper container">
+
+                <div id="tab1" class="choice-country__tab-content tab-content tab-content--active">
+
+                    <div class="choice-region__nav-tabs tabs">
+                        <ul class="choice-region__tabs-list">
+                            <li class="choice-region__nav-tab-item tab-item" data-id="#top">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Топ
+                                </a>
+                            </li>
+                            <li class="choice-region__nav-tab-item tab-item  tab-item--active" data-id="#europe">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Европа
+                                </a>
+                            </li>
+                            <li class="choice-region__nav-tab-item tab-item" data-id="#east">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Восток
+                                </a>
+                            </li>
+                            <li class="choice-region__nav-tab-item tab-item" data-id="#asia">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Азия
+                                </a>
+                            </li>
+                            <li class="choice-region__nav-tab-item tab-item" data-id="#africa">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Африка
+                                </a>
+                            </li>
+                            <li class="choice-region__nav-tab-item tab-item" data-id="#america">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Америка
+                                </a>
+                            </li>
+                            <li class="choice-region__nav-tab-item tab-item" data-id="#oceania">
+                                <a class="choice-region__nav-tab-link" href="#">
+                                    Океания
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- choice-region.tabs -->
+
+                    <div class="choice-region__tabs-content-wrapper">
+
+                        <div id="top" class="choice-region__tab-content tab-content">
+                            здесь будут топ страны
+                        </div>
+
+                        <div id="europe" class="choice-region__tab-content tab-content tab-content--active">
+                            Европа
+                        </div>
+
+                        <div id="east" class="choice-region__tab-content tab-content">
+                            здесь будут страны Востока
+                        </div>
+
+                        <div id="asia" class="choice-region__tab-content tab-content">
+                            здесь будут азиатские страны
+                        </div>
+
+                        <div id="africa" class="choice-region__tab-content tab-content">
+                            здесь будут африканские страны
+                        </div>
+
+                        <div id="america" class="choice-region__tab-content tab-content">
+                            здесь будут американские страны
+                        </div>
+
+                        <div id="oceania" class="choice-region__tab-content tab-content">
+                            здесь будут страны океании
+                        </div>
+
+                    </div>
+                    <!-- /.choice-country__tabs-content-wrapper -->
+
+
+                </div>
+                <!-- /.choice-color__tab-content -->
+
+
+                <div id="tab2" class="choice-country__tab-content tab-content">
+                    контент 2
+                </div>
+                <!-- /.choice-color__tab-content -->
+
+            </div>
+            <!-- /.choice-color__tabs-content-wrapper -->
+
+        </form>
+        <!-- /.choice-country-form -->
+    </section>
+    <!-- /.choice-country -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <nav class="footer-nav">
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__list-item">
+                            <a class="footer-nav__list-link" href="#">Туристам</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="footer-nav__list-link" href="#">Организаторам</a>
+                        </li>
+
+                        <li class="footer-nav__list-item">
+                            <a class="footer-nav__list-link" href="#">О сервисе</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <ul class="footer-social__list">
+                    <li class="footer-social__list-item">
+                        <a class="footer-social__list-link" href="#">
+                            <img class="footer-social__list-icon" src="images/icons/social/icon-facebook.svg"
+                                alt="facebook">
+                        </a>
+                    </li>
+                    <li class="footer-social__list-item">
+                        <a class="footer-social__list-link" href="#">
+                            <img class="footer-social__list-icon" src="images/icons/social/icon-vk.svg" alt="vk">
+                        </a>
+                    </li>
+                    <li class="footer-social__list-item">
+                        <a class="footer-social__list-link" href="#">
+                            <img class="footer-social__list-icon" src="images/icons/social/icon-instagram.svg"
+                                alt="instagram">
+                        </a>
+                    </li>
+                </ul>
+
+                <a class="footer__link" href="#">
+                    <img class="footer__link-icon" src="images/icons/ellipse.svg" alt="icon">
+                </a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
