@@ -151,13 +151,18 @@ body {
     margin-bottom: 35px;
 }
 
-.country-item--selected {
+.country-item {
     display: flex;
     margin-right: 15px;
+    padding: 3px 15px 4px 12px;
+    border: 2px solid #fff;
+    cursor: pointer;    
+    border-radius: 30px; 
+}
+
+.country-item--selected { 
     padding: 9px 16px;
-    border: 1px solid #000;
-    border-radius: 30px;
-    cursor: pointer;
+    border: 1px solid #000;       
 }
 
 .country-item--selected:last-child {
@@ -292,15 +297,22 @@ body {
 
 .choice-region__tab-content {
     display: none;
+    padding-bottom: 108px;
 }
 
 .choice-region__tab-content.tab-content--active {
     display: block;
 }
 
+.country-list__item.tab-item--active .country-item {
+    border: 2px solid #2B87DB;
+}
 
-
-
+.country-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 
 
