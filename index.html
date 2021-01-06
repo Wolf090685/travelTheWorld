@@ -7,6 +7,7 @@
     <title>Travel the world</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -29,12 +30,12 @@
                     </li>
                     <li class="user-list__item">
                         <a class="user-list__link" href="#">
-                            <img src="images/icons/heart-black.svg" alt="favourites icon">
+                            <img src="images/icons/favorite.svg" alt="favourites icon">
                         </a>
                     </li>
                     <li class="user-list__item">
                         <a class="user-list__link" href="#">
-                            <img src="images/icons/icon-user.svg" alt="user icon">
+                            <img src="images/icons/user.svg" alt="user icon">
                         </a>
                     </li>
                 </ul>
@@ -166,13 +167,21 @@
                 </div>
 
                 <div class="period-select">
-                    <label class="period-select__label">с
-                        <input class="period-select__input" type="date">
-                    </label>
-                    <label class="period-select__label">по
-                        <input class="period-select__input" type="date">
-                    </label>
-                    <button class="period-select__btn" type="submit">Поиск</button>
+                    <div class="form-group">
+                        <label class="period-select__label">
+                            <span>c</span>
+                            <input class="period-select__input datepicker" type="text">
+                        </label>  
+                    </div>
+                    <div class="form-group">
+                        <label class="period-select__label">
+                            <span>по</span>
+                            <input class="period-select__input datepicker" type="text">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button class="period-select__btn" type="submit">Поиск</button>
+                    </div>
                 </div>
             </div>
 
@@ -245,170 +254,260 @@
                         </div>
 
                         <div id="europe" class="choice-region__tab-content tab-content tab-content--active">
-                            <ul class="country-list">
-                                <li class="country-list__item tab-item">
+                            <ul class="country-list country-list--europe">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Austria.svg" alt="Austria">
                                         <span>Австрия</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Denmark.svg" alt="Denmark">
-                                        <span>Дания</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Netherlands.svg" alt="Netherlands">
-                                        <span>Нидерданды</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item tab-item--active">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/France.svg" alt="France">
-                                        <span>Франция</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Albania.svg" alt="Albania">
                                         <span>Албания</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Ireland.svg" alt="Ireland">
-                                        <span>Ирландия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Norway.svg" alt="Norway">
-                                        <span>Норвегия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Croatia.svg" alt="Croatia">
-                                        <span>Хорватия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Andorra.svg" alt="Andorra">
                                         <span>Андорра</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Iceland.svg" alt="Iceland">
-                                        <span>Исландия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Poland.svg" alt="Poland">
-                                        <span>Польша</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Montenegro.svg" alt="Montenegro">
-                                        <span>Черногория</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Belarus.svg" alt="Belarus">
                                         <span>Белоруссия</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item tab-item--active">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Spain.svg" alt="Spain">
-                                        <span>Испания</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Portugal.svg" alt="Portugal">
-                                        <span>Португалия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Czech_Republic.svg" alt="Czech Republic">
-                                        <span>Чехия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Belgium.svg" alt="Belgium">
                                         <span>Бельгия</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item tab-item--active">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Italy.svg" alt="Italy">
-                                        <span>Италия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Romania.svg" alt="Romania">
-                                        <span>Румыния</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Switzerland.svg" alt="Switzerland">
-                                        <span>Швейцария</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Bulgaria.svg" alt="Bulgaria">
                                         <span>Болгария</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Latvia.svg" alt="Latvia">
-                                        <span>Латвия</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/San_Marino.svg" alt="San Marino">
-                                        <span>Сан-Марино</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
-                                    <div class="country-item">
-                                        <img class="country-item__icon" src="images/flags/Sweden.svg" alt="Sweden">
-                                        <span>Швеция</span>
-                                    </div>
-                                </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Bosnia_and_Herzegovina.svg" alt="Bosnia and Herzegovina">
                                         <span>Босния и Герцеговина</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Vatican.svg" alt="Vatican">
+                                        <span>Ватикан</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/United_Kingdom.svg" alt="United Kingdom">
+                                        <span>Великобритания</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Hungary.svg" alt="Hungary">
+                                        <span>Венгрия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Germany.svg" alt="Germany">
+                                        <span>Германия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Greece.svg" alt="Greece">
+                                        <span>Греция</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Denmark.svg" alt="Denmark">
+                                        <span>Дания</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Ireland.svg" alt="Ireland">
+                                        <span>Ирландия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Iceland.svg" alt="Iceland">
+                                        <span>Исландия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item country-item--active">
+                                        <img class="country-item__icon" src="images/flags/Spain.svg" alt="Spain">
+                                        <span>Испания</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item country-item--active">
+                                        <img class="country-item__icon" src="images/flags/Italy.svg" alt="Italy">
+                                        <span>Италия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Latvia.svg" alt="Latvia">
+                                        <span>Латвия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Lithuania.svg" alt="Lithuania">
                                         <span>Литва</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Liechtenstein.svg" alt="Liechtenstein">
+                                        <span>Лихтенштейн</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Luxembourg.svg" alt="Luxembourg">
+                                        <span>Люксембург</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Malta.svg" alt="Malta">
+                                        <span>Мальта</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Moldova.svg" alt="Moldova">
+                                        <span>Молдавия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Monaco.svg" alt="Monaco">
+                                        <span>Монако</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Netherlands.svg" alt="Netherlands">
+                                        <span>Нидерданды</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Norway.svg" alt="Norway">
+                                        <span>Норвегия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Poland.svg" alt="Poland">
+                                        <span>Польша</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Portugal.svg" alt="Portugal">
+                                        <span>Португалия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Romania.svg" alt="Romania">
+                                        <span>Румыния</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/San_Marino.svg" alt="San Marino">
+                                        <span>Сан-Марино</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/North_Macedonia.svg" alt="North Macedonia">
                                         <span>Северная Македония</span>
                                     </div>
                                 </li>
-                                <li class="country-list__item tab-item">
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Serbia.svg" alt="Serbia">
+                                        <span>Сербия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Slovakia.svg" alt="Slovakia">
+                                        <span>Словакия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Slovenia.svg" alt="Slovenia">
+                                        <span>Словения</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Ukraine.svg" alt="Ukraine">
+                                        <span>Украина</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Finland.svg" alt="Finland">
+                                        <span>Финляндия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item country-item--active">
+                                        <img class="country-item__icon" src="images/flags/France.svg" alt="France">
+                                        <span>Франция</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Croatia.svg" alt="Croatia">
+                                        <span>Хорватия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Montenegro.svg" alt="Montenegro">
+                                        <span>Черногория</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Czech_Republic.svg" alt="Czech Republic">
+                                        <span>Чехия</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Switzerland.svg" alt="Switzerland">
+                                        <span>Швейцария</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
+                                    <div class="country-item">
+                                        <img class="country-item__icon" src="images/flags/Sweden.svg" alt="Sweden">
+                                        <span>Швеция</span>
+                                    </div>
+                                </li>
+                                <li class="country-list__item">
                                     <div class="country-item">
                                         <img class="country-item__icon" src="images/flags/Estonia.svg" alt="Estonia">
                                         <span>Эстония</span>
@@ -512,17 +611,37 @@
                 <a class="footer__link" href="#">
                     <img class="footer__link-icon" src="images/icons/ellipse.svg" alt="icon">
                 </a>
+                <div class="footer__link-more">
+                    <ul class="footer__link-more-list">
+                        <li class="footer__link-more-item">
+                            <a class="footer__more-link" href="#">Рекомендовать</a>
+                        </li>
+                        <li class="footer__link-more-item">
+                            <a class="footer__more-link" href="#">Неточность</a>
+                        </li>
+                        <li class="footer__link-more-item">
+                            <a class="footer__more-link" href="#">Жалоба</a>
+                        </li>
+                        <li class="footer__link-more-item">
+                            <a class="footer__more-link" href="#">Вопрос</a>
+                        </li>
+                        <li class="footer__link-more-item">
+                            <a class="footer__more-link" href="#">Другое</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
         <!-- /.container -->
     </footer>
     <!-- /.footer -->
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
-
 </html>

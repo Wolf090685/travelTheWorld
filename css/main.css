@@ -49,7 +49,6 @@ body {
     font-weight: 400;
     color: #000;
     background: #fff;
-    /* background: #E5E5E5; */
 }
 
 .container {
@@ -170,6 +169,7 @@ body {
 }
 
 .country-item__icon {
+    width: 25px;
     margin-right: 12px;
 }
 
@@ -187,7 +187,7 @@ body {
     transform: translateY(-50%);
     width: 15px;
     height: 15px;
-    background: url(../images/icons/icon-cross.svg);
+    background: url(../images/icons/cross-sign.svg) center / cover no-repeat;
     cursor: pointer;
 }
 
@@ -195,7 +195,7 @@ body {
     margin-bottom: 46px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    min-height: 50px;
 }
 
 .period-select__label {    
@@ -211,8 +211,7 @@ body {
 }
 
 .period-select__btn {
-    display: inline-block;
-    margin-left: 24px;
+    display: inline-block;    
     padding: 11px 21px;
     font-weight: 800;
     font-size: 20px;
@@ -229,7 +228,7 @@ body {
     background: #2168aa;
 }
 
-/* Tabs */ 
+/* Tabs -  вкладки куда поедем и что будем делать*/
 .choice-country__nav-tabs {
     margin: 0 auto;
     border-bottom: 2px solid #2B87DB;
@@ -272,6 +271,7 @@ body {
     display: block;
 }
 
+/* Tabs - выбор региона*/
 .choice-region__nav-tabs {
     padding: 57px 0 64px;
 }
@@ -304,15 +304,16 @@ body {
     display: block;
 }
 
-.country-list__item.tab-item--active .country-item {
-    border: 2px solid #2B87DB;
-}
-
+/* list of countres */
 .country-list {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.country-list--europe {
+    max-height: 700px;
 }
 
 .country-list__item {
@@ -321,11 +322,36 @@ body {
     margin-bottom: 13px;
 }
 
+.country-item--active {
+    border: 2px solid #2B87DB; 
+}
 
+/* Custom date input */
+.datepicker {   
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    padding: 12px 10px 12px 50px;
+    margin-left: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 400;
+    color: #000;
+    vertical-align: text-bottom;
+    border: 1px solid #0E0E0E;
+    background-color: #fff;
+    border-radius: 6px;
+}
 
-
-
-
+.ui-datepicker-trigger {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 26px;    
+    right: 190px;
+    top: -4px;
+}
 
 /* Footer */
 .footer {
@@ -375,4 +401,46 @@ body {
 .footer__link {
     position: absolute;
     right: 0;
+}
+
+.footer__link-more {
+    position: absolute;
+    opacity: 0;
+    width: 133px;
+    padding: 10px;
+    top: -150%;
+    right: -25px;
+    background: #FCFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    transition: opacity .3s linear;
+}
+
+.footer__link-more::after {
+    position: absolute;
+    content: '';
+    bottom: -30px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-width: 25px 36px 0px 40px;
+    border-color: #FCFCFC transparent transparent transparent;
+    border-style: solid;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));    
+}
+
+.footer__link-more--show {
+    opacity: 1;
+}
+
+.footer__more-link {
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B7B7B;
+    transition: color .3s linear;
+}
+
+.footer__more-link:hover {
+    color: #000;
 }
