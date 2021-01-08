@@ -35,28 +35,7 @@ $(function () {
             $('.footer__link-more').removeClass('footer__link-more--show');
         }
 
-        // if (event.target.closest('[data-id="#europe"]')) {   
-        //     console.log('1');  
-        //     $('#europe').css('display', 'block');
-        // } 
-        // if (event.target.closest('[data-id="#top"]') || event.target.closest('[data-id="#east"]') || event.target.closest('[data-id="#asia"]') 
-        // || event.target.closest('[data-id="#africa"]') || event.target.closest('[data-id="#africa"]') || event.target.closest('[data-id="#america"]')
-        // || event.target.closest('[data-id="#oceania"]') )
-        //  {
-        //     $('#europe').css('display', 'none');
-        // }
-
     });
-
-    // $('.choice-country__nav-tab').on('click', function(event) {
-    //     event.preventDefault();
-    //     console.log('click');       
-    //     $('#europe').css('display', 'block');      
-    //     $('.choice-region__nav-tab-item.tab-item--active').css('display', 'block');         
-    //     $($(this).closest('.tabs').siblings().find('div')).removeClass('tab-content--active');        
-    //     $($(this).attr('data-id')).addClass('tab-content--active');       
-
-    // });
 
     // Custom calendar
     $('.datepicker').datepicker({
